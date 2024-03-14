@@ -15,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $title = 'La mia homepage!';
-    return view('homepage', compact('title'));
+    $paragraph = 'Benvenuti, welcome, bienvienue...';
+    $greetings = config('greetings');
+    return view('homepage', compact('title', 'paragraph', 'greetings'));
 });

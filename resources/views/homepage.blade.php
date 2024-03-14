@@ -10,6 +10,17 @@
 <body>
 
     <h1>{{ $title }}</h1>
+    <p>{{ $paragraph }}</p>
+
+    <hr>
+
+    <ul>
+        @forelse($greetings as $greeting)
+        <li>{{ $greeting }}</li>
+        @empty
+        <li>ciao ciao!</li>
+        @endforelse
+    </ul>
 
 </body>
 
